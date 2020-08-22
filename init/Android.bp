@@ -1,0 +1,12 @@
+cc_library_static {
+    name: "libinit_picasso",
+    include_dirs: [
+        "system/core/base/include",
+        "system/core/init",
+    ],
+    cflags: [
+        "-Wall",
+    ],
+    srcs: ["init_picasso.cpp"],
+    recovery_available: true,
+}
