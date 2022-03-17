@@ -8,5 +8,6 @@ cc_library_static {
         "-Wall",
     ],
     srcs: ["init_picasso.cpp"],
+    shared_libs: ["libbase"],
     recovery_available: true,
 }
