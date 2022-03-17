@@ -21,7 +21,7 @@ DEVICE_PATH := device/xiaomi/picasso
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 
 # Inherit from our custom product configuration
-#$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
