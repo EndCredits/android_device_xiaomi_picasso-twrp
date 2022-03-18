@@ -1,27 +1,15 @@
-TWRP Device Tree for MI 10 Ultra
+TWRP Device Tree for Redmi K30 5G
 =========================================
 
-The Xiaomi MI 10 Ultra (codenamed _"cas"_) is a high-end smartphone from Xiaomi.
-
-It was announced on August 2020. Release date was August 2020.
-
-Kernel and all blobs are extracted from [miui_CAS_V12.0.15.0.QJJCNXM_5abfb26bdb_10.0.zip](https://bigota.d.miui.com/V12.0.15.0.QJJCNXM/miui_CAS_V12.0.15.0.QJJCNXM_5abfb26bdb_10.0.zip) firmware.
+Kernel and all blobs are extracted from [MIUI CN Stable V12.5.9.0](https://xiaomifirmwareupdater.com/miui/picasso/stable/V12.5.9.0.RGICNXM/) firmware.
 
 :sparkling_heart: Thanks [@yarpiin](https://github.com/yarpiin)
 
-# Works:
-- **Decryption**(Support **pattern/pin**, tested on **V12.5.6** and **21.9.27**)
-- MTP/ADB
-- Fastbootd
-- ADB Sideload
-- Vibration
-- ...
+Thanks [@XayahSuSuSu](https://github.com/XayahSuSuSu) For his great work
 
 # Features:
-- **Android 11 Support**
-- Magisk-v23.0 included
+- Magisk-v24.3 included
 - Prevent from replacing TWRP with stock recovery
-- DTBO Patch
 - **[Support for flashing rom(>=4GB)](https://github.com/xiangfeidexiaohuo/rec4Gota)**
 - Enable /cache partition
 
@@ -29,16 +17,27 @@ Kernel and all blobs are extracted from [miui_CAS_V12.0.15.0.QJJCNXM_5abfb26bdb_
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-SoC     | Qualcomm SDM865 Snapdragon 865
-CPU     | Octa-core (1x2.84 GHz Kryo 585 & 3x2.42 GHz Kryo 585 & 4x1.80 GHz Kryo 585)
-GPU     | Adreno 650
-Memory  | 8/12/16 GB RAM
-Shipped Android Version | 10.0 with MIUI 12
-Storage | 128/256/512 GB
-Battery | Li-Ion 4500 mAh, non-removable, graphene-enhanced
-Display | 1080 x 2340 pixels, 19.5:9 ratio, 6.67 inches, OLED, 1B colors, 120Hz, HDR10+, 800 nits
-Camera  | 48MP(wide) 48MP(Periscope Telephoto) 20MP(Ultra-wide) 12MP(Telephoto 2x Optical Zoom) 8MP(Telephoto 5x Hybrid zoom)
+Network	| GSM (B2/B3/B5/B8) / HSPA (B1/B2/B5/B8) / LTE (B1/B3/B5/B7/B8, B34/B38/B39/B40/B41) / NR (n41/n78)
+SIM Slots | Dual Nano SIM card capability
+Launch	| 2020, January
+SoC     | Qualcomm Snapdragon 765G
+CPU     | Octa-core (1x2.4 GHz Kryo 475 Prime & 1x2.2 GHz Kryo 475 Gold & 6x1.8 GHz Kryo 475 Silver)
+GPU     | Adreno 620
+Memory  | 6/8 GB RAM
+Shipped Android Version | 10 with MIUI 11
+Storage | 64/128/256 GB (without SD card slot)
+Battery | Non-removable Li-Po 4500 mAh battery
+Display | 1080 x 2400 pixels, 20:9 ratio, 6.67 inches, 120hz, HDR10, IPS LCD (~386 ppi density), Gorilla Glass 5
+Weight  | 208 grams
+Back cameras   | 64.0MP (main) + 8.0MP (wide) + 5.0MP (macro) + 2.0MP (portrait), LED flash, 2160p@30fps or 1080p@60fps
+Front cameras  | 20.0MP (main) +2.0MP (portrait), 1080p@30fps
+WLAN  | Wi-Fi 802.11 a/b/g/n/ac, Wi-Fi Direct, dual band, hotspot
+Bluetooth  | v5.1 A2DP, LE, aptX HD
+GPS	    | Yes, with A-GPS, GLONASS, BDS, GALILEO
+NFC	    | Yes
+Radio   | FM radio
+USB	    | C-type 2.0 with fast charge up to 30 W, OTG
+Colors 	| Blue, purple, red or white
+Sensors | Fingerprint ID with the power button, infrared, 3.5mm jack
 
-# Device picture
-
-![Xiaomi MI 10 Ultra 5G ](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-mi10-ultra-11.jpg "Xiaomi MI 10 Ultra 5G")
+![Xiaomi Redmi K30 5G](https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1575882160.38569692.jpg "Xiaomi Redmi K30 5G")
