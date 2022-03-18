@@ -25,17 +25,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on init
-    start vendor.qti.vibrator-1-2
-    start hwservicemanager
-    setprop crypto.ready 1
-
-service vendor.qti.vibrator-1-2 /vendor/bin/hw/vendor.qti.hardware.vibrator@1.2-service
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0
-
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice

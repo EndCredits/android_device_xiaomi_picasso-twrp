@@ -9,15 +9,15 @@ $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Inherit from cas device
-$(call inherit-product, device/xiaomi/cas/device.mk)
+# Inherit from picasso device
+$(call inherit-product, device/xiaomi/picasso/device.mk)
 
-# Inherit some common Omni stuff.
+# Inherit some common twrp stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := cas
-PRODUCT_NAME := omni_cas
+PRODUCT_DEVICE := picasso
+PRODUCT_NAME := twrp_picasso
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := M2007J1SC
+PRODUCT_MODEL := Redmi K30 5G
 PRODUCT_MANUFACTURER := xiaomi

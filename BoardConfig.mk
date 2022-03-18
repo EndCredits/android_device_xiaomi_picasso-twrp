@@ -4,22 +4,25 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/cas
+DEVICE_PATH := device/xiaomi/picasso
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-2a
+TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_VARIANT := cortex-a76
+TARGET_CPU_ABI2 :=
+TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT_RUNTIME := cortex-a76
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a76
+TARGET_2ND_CPU_VARIANT := generic
+TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 
 TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
@@ -29,7 +32,7 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := cas
+TARGET_OTA_ASSERT_DEVICE := picasso
 
 # AVB
 BOARD_AVB_ENABLE := true
@@ -47,8 +50,8 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
 # Bootloader
-PRODUCT_PLATFORM := kona
-TARGET_BOOTLOADER_BOARD_NAME := kona
+PRODUCT_PLATFORM := lito
+TARGET_BOOTLOADER_BOARD_NAME := lito
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
@@ -62,7 +65,7 @@ BOARD_USES_METADATA_PARTITION := true
 USE_FSCRYPT := true
 
 # Dynamic Partition
-BOARD_SUPER_PARTITION_SIZE := 9126805504
+BOARD_SUPER_PARTITION_SIZE := 9122611200
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product odm vendor
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 9122611200
@@ -73,7 +76,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 cgroup.memory=nokmem,nosocket reboot=panic_warm androidboot.selinux=permissive androidboot.usbconfigfs=true
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 cgroup.memory=nokmem,nosocket androidboot.usbconfigfs=true androidboot.selinux=permissive androidboot.boot_devices=soc/1d84000.ufshc androidboot.fastboot=1
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
@@ -91,8 +94,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/cas
-TARGET_KERNEL_CONFIG := cas_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/picasso
+TARGET_KERNEL_CONFIG := picasso_defconfig
 
 # MIUI 12.X (Android 11) Decryption
 BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
@@ -105,9 +108,9 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 134217728
 
 # Platform
-TARGET_BOARD_PLATFORM := kona
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno650
-QCOM_BOARD_PLATFORMS += kona
+TARGET_BOARD_PLATFORM := lito
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno620
+QCOM_BOARD_PLATFORMS += lito
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
@@ -137,7 +140,6 @@ TW_EXCLUDE_TWRPAPP := true
 TW_HAS_EDL_MODE := true
 TW_SUPPORT_INPUT_1_2_HAPTICS := true
 TW_NO_SCREEN_BLANK := true
-TW_DEVICE_VERSION := Xayah
 PLATFORM_VERSION := 16.1.0
 
 # Vendor
