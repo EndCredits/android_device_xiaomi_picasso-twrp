@@ -8,7 +8,6 @@ system/lib64/android.hidl.base@1.0.so
 system/lib64/android.hidl.token@1.0.so
 system/lib64/ashmemd_aidl_interface-cpp.so
 system/lib64/libhidlbase.so
-system/lib64/libandroidicu.so
 system/lib64/libashmemd_client.so
 system/lib64/libicui18n.so
 system/lib64/libicuuc.so
