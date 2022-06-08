@@ -29,7 +29,3 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# Apex libraries
-PRODUCT_HOST_PACKAGES += \
-    libandroidicu
