@@ -26,6 +26,11 @@ PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
+# SHIPPING API
+PRODUCT_SHIPPING_API_LEVEL := 30
+# VNDK API
+PRODUCT_TARGET_VNDK_VERSION := 31
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
