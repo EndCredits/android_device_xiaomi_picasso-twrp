@@ -15,6 +15,9 @@ $(call inherit-product, device/xiaomi/picasso/device.mk)
 # Inherit some common twrp stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
+# Build with minimal manifest
+ALLOW_MISSING_DEPENDENCIES := true
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := picasso
 PRODUCT_NAME := twrp_picasso

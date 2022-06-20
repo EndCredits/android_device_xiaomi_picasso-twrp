@@ -1,5 +1,5 @@
-ro.product.board=kona
-ro.board.platform=kona
+ro.product.board=lito
+ro.board.platform=lito
 sys.usb.controller=a600000.dwc3
 sys.usb.rndis.func.name=rndis_bam
 sys.usb.rmnet.func.name=rmnet_bam
