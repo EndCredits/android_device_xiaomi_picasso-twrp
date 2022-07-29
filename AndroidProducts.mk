@@ -15,8 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_picasso.mk \
-    $(LOCAL_DIR)/twrp_munch.mk \
-    $(LOCAL_DIR)/twrp_thyme.mk \
-    $(LOCAL_DIR)/twrp_psyche.mk
-
+    $(LOCAL_DIR)/twrp_picasso.mk
