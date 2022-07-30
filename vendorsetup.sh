@@ -18,6 +18,8 @@
 # 	Please maintain this if you use this script or any part of it
 #
 
+export ALLOW_MISSING_DEPENDENCIES=true
+
 FOX_MANIFEST_ROOT=$(gettop)
 if [ -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox_defaults.go -a -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox.mk ]; then
 	#export PLATFORM_VERSION="11.0"
