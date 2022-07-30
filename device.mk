@@ -26,8 +26,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Configure twrp
 $(call inherit-product, vendor/twrp/config/common.mk)
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+	android.hardware.fastboot@1.0-impl-mock.recovery \
+    fastbootd
+
 # SHIPPING API
 PRODUCT_SHIPPING_API_LEVEL := 30
+
 # VNDK API
 PRODUCT_TARGET_VNDK_VERSION := 31
 
