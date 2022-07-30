@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+DEVICE_PATH := device/xiaomi/picasso
+
 # Configure base.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
@@ -28,7 +30,8 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Fastbootd
 PRODUCT_PACKAGES += \
-	android.hardware.fastboot@1.0-impl-mock.recovery \
+    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd
 
 # SHIPPING API
