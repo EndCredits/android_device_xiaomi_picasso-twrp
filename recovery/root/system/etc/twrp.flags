@@ -11,7 +11,6 @@
 # Boot
 /boot                  emmc    /dev/block/bootdevice/by-name/boot                                 flags=backup=1;flashimg=1;
 /dtbo                  emmc    /dev/block/bootdevice/by-name/dtbo                                 flags=backup=1;display="Dtbo";flashimg=1
-/vendor_boot           emmc    /dev/block/bootdevice/by-name/vendor_boot                          flags=display="vendor_boot";backup=1;flashimg=1
 /exaid                 emmc    /dev/block/bootdevice/by-name/exaid                                flags=display="exaid";backup=1;flashimg=1
 /vbmeta                emmc    /dev/block/bootdevice/by-name/vbmeta                               flags=display="vbmeta";backup=1;flashimg=1
 /vbmeta_system         emmc    /dev/block/bootdevice/by-name/vbmeta_system                        flags=display="vbmeta_system";backup=1;flashimg=1
