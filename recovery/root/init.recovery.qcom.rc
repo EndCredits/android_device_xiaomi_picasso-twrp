@@ -41,7 +41,6 @@ on fs
 
 on init
     start vendor.qseecomd
-    start boot-hal-1-1
 
 on boot
     start health-hal-2-1S
