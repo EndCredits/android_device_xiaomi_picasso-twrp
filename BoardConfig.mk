@@ -150,6 +150,9 @@ PLATFORM_VERSION := 12
 PLATFORM_VERSION_LAST_STABLE := 12
 TW_HAS_EDL_MODE := true
 
+# haptics
+TW_SUPPORT_INPUT_1_2_HAPTICS := true
+
 #BOARD_AVB_BOOT_ADD_HASH_FOOTER_ARGS += \
 #--prop com.android.build.boot.os_version:$(PLATFORM_VERSION) \
 #--prop com.android.build.boot.security_patch:$(PLATFORM_SECURITY_PATCH)
