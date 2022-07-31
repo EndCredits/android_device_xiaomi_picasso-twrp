@@ -10,3 +10,6 @@ ro.charger.enable_suspend=1
 
 # Reset allocatable space
 ro.dynamic.full_size=9126805504
+
+# Metadata wrapped key
+fbe.metadata.wrappedkey=true
