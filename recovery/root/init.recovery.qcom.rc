@@ -43,7 +43,7 @@ on init
     start vendor.qseecomd
 
 on boot
-    start health-hal-2-1S
+    start health-hal-2-1
     setprop sys.usb.config adb
 
 on property:vendor.sys.listeners.registered=true
