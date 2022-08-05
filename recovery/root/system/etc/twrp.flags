@@ -4,8 +4,6 @@
 
 # mount point          fstype  device                                        device2              flags
 
-/metadata         ext4           /dev/block/by-name/metadata                flags=display="Metadata";backup=1;flashimg=1;wrappedkey;wipeingui
-/data             f2fs           /dev/block/bootdevice/by-name/userdata     flags=display="Data";fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0;wrappedkey;keydirectory=/metadata/vold/metadata_encryption
 /cust             ext4           /dev/block/bootdevice/by-name/cust         flags=display="Cust";backup=1;flashimg=1
 
 # Boot
