@@ -6,6 +6,9 @@
 
 /cust             ext4           /dev/block/bootdevice/by-name/cust         flags=display="Cust";backup=1;flashimg=1
 
+/metadata      ext4    /dev/block/bootdevice/by-name/metadata                    flags=display="Metadata";backup=1;wrappedkey
+/data          f2fs    /dev/block/bootdevice/by-name/userdata                    flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0,metadata_encryption=aes-256-xts:wrappedkey_v0,keydirectory=/metadata/vold/metadata_encryption,fscompress
+
 # Boot
 /boot             emmc           /dev/block/bootdevice/by-name/boot         flags=backup=1;flashimg=1
 /dtbo             emmc           /dev/block/bootdevice/by-name/dtbo         flags=display="DTBO";backup=1;flashimg=1
