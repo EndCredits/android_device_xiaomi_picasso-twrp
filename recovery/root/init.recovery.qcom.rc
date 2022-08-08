@@ -56,11 +56,9 @@ on fs
 
 on init
     start vendor.qseecomd
-    start boot-hal-1-1
 
 on boot
     start health-hal-2-1
-    start vendor.qti.vibrator
     setprop sys.usb.config adb
 
 on property:vendor.sys.listeners.registered=true
@@ -83,10 +81,4 @@ service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qt
     user root
     group root
     disabled
-    seclabel u:r:recovery:s0
-
-service vendor.qti.vibrator /vendor/bin/hw/vendor.qti.hardware.vibrator.service
-    class hal
-    user system
-    group system input
     seclabel u:r:recovery:s0
