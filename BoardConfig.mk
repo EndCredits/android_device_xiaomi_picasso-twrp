@@ -90,12 +90,6 @@ BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 9122611200
 # System as root
 BOARD_ROOT_EXTRA_FOLDERS := bluetooth dsp firmware persist
 BOARD_SUPPRESS_SECURE_ERASE := true
-TARGET_RECOVERY_DEVICE_MODULES += libion libandroidicu vendor.display.config@1.0 vendor.display.config@2.0 libdisplayconfig.qti
-RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so
 
 # File systems
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -156,7 +150,6 @@ TARGET_USES_MKE2FS := true
 TW_NO_SCREEN_BLANK := true
 TW_SCREEN_BLANK_ON_BOOT := false
 TW_DELAY_TOUCH_INIT_MS := 1000
-TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_APEX := true
 PLATFORM_VERSION := 12
 PLATFORM_VERSION_LAST_STABLE := 12
