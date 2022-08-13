@@ -5,8 +5,8 @@
 
 # mount point  fstype  device                             device2                flags
 
-/metadata      ext4    /dev/block/by-name/metadata                               flags=display="metadata";wrappedkey;backup=1
-/data          f2fs    /dev/block/bootdevice/by-name/userdata                    flags=fileencryption=ice;wrappedkey;keydirectory=/metadata/vold/metadata_encryption
+/metadata      ext4    /dev/block/by-name/metadata                               flags=display="metadata";backup=1
+/data          f2fs    /dev/block/bootdevice/by-name/userdata                    flags=fileencryption=ice;wrappedkey
 /boot          emmc    /dev/block/bootdevice/by-name/boot
 /dtbo          emmc    /dev/block/bootdevice/by-name/dtbo                        flags=backup=1;display="Dtbo";flashimg=1
 /cache         ext4    /dev/block/bootdevice/by-name/cache

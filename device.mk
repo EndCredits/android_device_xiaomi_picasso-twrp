@@ -20,17 +20,6 @@ PRODUCT_RELEASE_NAME := picasso
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Crypto
-PRODUCT_PACKAGES += \
-    qcom_decrypt \
-    qcom_decrypt_fbe
-
-# Fastbootd
-PRODUCT_PACKAGES += \
-	android.hardware.fastboot@1.0-impl-mock \
-	android.hardware.fastboot@1.0-impl-mock.recovery \
-	fastbootd
-
 # Shipped API Version
 PRODUCT_SHIPPING_API_LEVEL := 29
 
