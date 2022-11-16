@@ -52,12 +52,20 @@ BUILD_BROKEN_DUP_RULES := true
 # Crypto
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := false
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
 BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS := metadata
-TW_USE_FSCRYPT_POLICY := 1
+TW_USE_FSCRYPT_POLICY := 2
 OF_FIX_DECRYPTION_ON_DATA_MEDIA := 1
+
+# Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.crypto.allow_encrypt_override=true \
+	ro.crypto.dm_default_key.options_format.version=2 \
+	ro.crypto.volume.filenames_mode=aes-256-cts \
+	ro.crypto.volume.metadata.method=dm-default-key \
+	ro.crypto.volume.options=::v2
 
 # DTB
 BOARD_BOOT_HEADER_VERSION := 2
