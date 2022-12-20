@@ -27,6 +27,11 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_SOONG_NAMESPACES += \
 	$(LOCAL_PATH)
 
+# Encryption
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
+
 # Overrides
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=$(PRODUCT_RELEASE_NAME) \

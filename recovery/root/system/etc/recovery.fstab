@@ -45,6 +45,6 @@ vendor                                                  /vendor                e
 vendor                                                  /vendor                erofs    ro,barrier=1,discard                                 wait,avb,logical,first_stage_mount
 odm                                                     /odm                   ext4    ro,barrier=1,discard                                 wait,avb,logical,first_stage_mount
 odm                                                     /odm                   erofs    ro,barrier=1,discard                                 wait,avb,logical,first_stage_mount
-/dev/block/bootdevice/by-name/metadata                  /metadata              ext4    noatime,nosuid,nodev,discard                         wait,formattable,first_stage_mount
-/dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt,checkpoint_merge    latemount,wait,formattable,fileencryption=ice,wrappedkey
+/dev/block/by-name/metadata                             /metadata              ext4    noatime,nosuid,nodev,discard                         wait,check,formattable,first_stage_mount
+/dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt latemount,wait,check,formattable,fileencryption=ice,quota,reservedsize=128M,checkpoint=fs
 /dev/block/bootdevice/by-name/misc                      /misc                  emmc    defaults                                             defaults
